@@ -3,7 +3,8 @@ import pickle
 import streamlit as st
 
 #Define the functions and variables
-classifier = pickle.load(open('https://github.com/Collinskim001/Iris-classification/svc_model.pkl', 'rb'))
+with open('svc_model.pk1', 'rb') as model:
+    classifier=joblib.load(model)
 
 def predictor(sepal_Length, sepal_width, petal_Length,petal_width):
     global classifier
