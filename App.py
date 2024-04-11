@@ -1,4 +1,5 @@
 # import libraries
+import pickle
 import streamlit as st
 
 #Define the functions and variables
