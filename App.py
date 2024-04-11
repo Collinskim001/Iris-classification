@@ -1,10 +1,10 @@
 # import libraries
-#import joblib
+import joblib as jb
 import streamlit as st
 
 #Define the functions and variables
 with open('svc_model.pk1', 'rb') as model:
-    classifier=joblib.load(model)
+    classifier=jb.load(model)
 
 def predictor(sepal_Length, sepal_width, petal_Length,petal_width):
     global classifier
