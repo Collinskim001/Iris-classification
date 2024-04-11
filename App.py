@@ -1,10 +1,8 @@
 # import libraries
-import joblib
 import streamlit as st
 
 #Define the functions and variables
-with open('svc_model.pk1', 'rb') as model:
-    classifier=joblib.load(model)
+classifier = pickle.load(open('svc_model.pkl', 'rb'))
 
 def predictor(sepal_Length, sepal_width, petal_Length,petal_width):
     global classifier
